@@ -3,13 +3,13 @@
     "description": "Kustom api Magento 2 Extension",
     "type": "magento2-module",
     "license": "Apache-2.0",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "require": {
         "php": "~7.4.0||~8.1.0||~8.2.0||~8.3.0||~8.4.0",
         "magento/framework": "^103",
         "guzzlehttp/guzzle": "^7.3.0",
         "vaimo/kustom-module-logger": "3.0.9",
-        "vaimo/kustom-module-admin-settings": "1.0.14"
+        "vaimo/kustom-module-admin-settings": ">=1.0.14"
     },
     "autoload": {
         "psr-4": {
