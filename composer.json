@@ -3,7 +3,7 @@
     "description": "Kustom api Magento 2 Extension",
     "type": "magento2-module",
     "license": "Apache-2.0",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "require": {
         "php": "~7.4.0||~8.1.0||~8.2.0||~8.3.0||~8.4.0",
         "magento/framework": "^103",
