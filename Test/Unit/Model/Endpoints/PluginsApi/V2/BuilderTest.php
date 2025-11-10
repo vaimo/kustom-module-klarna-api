@@ -91,7 +91,7 @@ class BuilderTest extends TestCase
             ->willReturn('2.4.7');
         $this->dependencyMocks['versionInfo']->expects($this->once())
             ->method('getM2KlarnaVersion')
-            ->willReturn('3.2.0');
+            ->willReturn('1.1.0');
         $this->dependencyMocks['bodyBuilder']
             ->method('add')
             ->willReturnCallback(fn($key, $value) =>
@@ -100,11 +100,11 @@ class BuilderTest extends TestCase
                     ['installation_data->platform_data', [
                         'platform_name' => 'Magento',
                         'platform_version' => '2.4.7',
-                        'platform_plugin_name' => 'klarna/m2-klarna',
+                        'platform_plugin_name' => 'kustom/module-checkout',
                     ]] => $this->dependencyMocks['bodyBuilder'],
                     ['installation_data->klarna_plugin_data', [
-                        'plugin_identifier' => 'klarna/m2-klarna',
-                        'plugin_version' => '3.2.0',
+                        'plugin_identifier' => 'kustom/module-checkout',
+                        'plugin_version' => '1.1.0',
                     ]] => $this->dependencyMocks['bodyBuilder'],
                     ['installation_data->store_data', [
                         'store_urls' => ['https://example.com'],
