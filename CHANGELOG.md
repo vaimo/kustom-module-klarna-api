@@ -1,9 +1,12 @@
+1.0.8 / 2026-03-16
+==================
+
+  * KUSTOM-68 Fix guzzlehttp/guzzle compatibility issue for magento <2.4.5
 
 1.0.7 / 2025-11-10
 ==================
 
   * KUSTOM-33 Change version info in admin panel
-
 
 1.0.4 / 2025-06-03
 ==================
