@@ -13,6 +13,7 @@ namespace Klarna\KlarnaApi\Test\Unit\Model\Endpoints\PluginsApi\V2\Responses\Pos
 
 use Klarna\Base\Test\Unit\Mock\TestObjectFactory;
 use Klarna\KlarnaApi\Model\Endpoints\PluginsApi\V2\Responses\PostFeatures\FailureResponse;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface as PsrResponseInterface;
 
@@ -36,6 +37,7 @@ class FailureResponseTest extends TestCase
      */
     private \Psr\Http\Message\StreamInterface $body;
 
+    #[DataProvider('responseDataProvider')]
     /**
      * @dataProvider responseDataProvider
      */
