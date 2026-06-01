@@ -71,7 +71,7 @@ class ProviderTest extends TestCase
     protected function setUp(): void
     {
         $mockFactory = new MockFactory($this);
-        $objectFactory = new TestObjectFactory($mockFactory);
+        $objectFactory = new TestObjectFactory('');
         $this->provider = $objectFactory->create(Provider::class);
         $this->dependencyMocks = $objectFactory->getDependencyMocks();
 

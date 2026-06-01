@@ -103,7 +103,7 @@ class RequestTest extends TestCase
     protected function setUp(): void
     {
         $mockFactory = new MockFactory($this);
-        $objectFactory = new TestObjectFactory($mockFactory);
+        $objectFactory = new TestObjectFactory('');
         $this->request = $objectFactory->create(Request::class);
 
         $this->request->setBody($this->body);

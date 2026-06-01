@@ -1,18 +1,18 @@
 <?php
+
 /**
  * Copyright © Klarna Bank AB (publ)
  *
  * For the full copyright and license information, please view the NOTICE
  * and LICENSE files that were distributed with this source code.
  */
+
 declare(strict_types=1);
 
 namespace Klarna\KlarnaApi\Test\Unit\Model\Endpoints\PluginsApi\V2\Responses\PostFeatures;
 
-use Klarna\Base\Test\Unit\Mock\MockFactory;
 use Klarna\Base\Test\Unit\Mock\TestObjectFactory;
 use Klarna\KlarnaApi\Model\Endpoints\PluginsApi\V2\Responses\PostFeatures\FailureResponse;
-use Klarna\KlarnaApi\Model\Http\Response\FailureResponseAbstract;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface as PsrResponseInterface;
 
@@ -69,8 +69,7 @@ class FailureResponseTest extends TestCase
 
     protected function setUp(): void
     {
-        $mockFactory = new MockFactory($this);
-        $objectFactory = new TestObjectFactory($mockFactory);
+        $objectFactory = new TestObjectFactory('');
 
         $this->failureResponse = $objectFactory->create(FailureResponse::class);
         $this->psrResponse = $this->createMock(PsrResponseInterface::class);

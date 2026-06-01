@@ -82,7 +82,7 @@ class InstallationIdTest extends TestCase
     protected function setUp(): void
     {
         $mockFactory = new MockFactory($this);
-        $objectFactory = new TestObjectFactory($mockFactory);
+        $objectFactory = new TestObjectFactory('');
 
         $this->installationId = $objectFactory->create(InstallationId::class);
         $this->dependencyMocks = $objectFactory->getDependencyMocks();

@@ -61,7 +61,7 @@ class SuccessResponseTest extends TestCase
     protected function setUp(): void
     {
         $mockFactory = new MockFactory($this);
-        $objectFactory = new TestObjectFactory($mockFactory);
+        $objectFactory = new TestObjectFactory('');
 
         $this->successResponse = $objectFactory->create(SuccessResponse::class);
         $this->psrResponse = $this->createMock(PsrResponseInterface::class);

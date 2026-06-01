@@ -102,7 +102,7 @@ class ServiceTest extends TestCase
     protected function setUp(): void
     {
         $mockFactory = new MockFactory($this);
-        $objectFactory = new TestObjectFactory($mockFactory);
+        $objectFactory = new TestObjectFactory('');
 
         $this->service = $objectFactory->create(Service::class);
         $this->dependencyMocks = $objectFactory->getDependencyMocks();
@@ -116,7 +116,7 @@ class ServiceTest extends TestCase
         $this->request = $mockFactory->create(Request::class);
         $this->successResponse = $mockFactory->create(SuccessResponse::class);
         $this->failureResponse = $mockFactory->create(FailureResponse::class);
-        
+
         $this->dependencyMocks['storeFactory']->method('create')
             ->willReturn($this->store);
         $this->store->method('load')

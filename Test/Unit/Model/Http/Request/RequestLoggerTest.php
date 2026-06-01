@@ -146,7 +146,7 @@ class RequestLoggerTest extends TestCase
     protected function setUp(): void
     {
         $mockFactory = new MockFactory($this);
-        $objectFactory = new TestObjectFactory($mockFactory);
+        $objectFactory = new TestObjectFactory('');
         $this->requestLogger = $objectFactory->create(RequestLogger::class);
         $this->dependencyMocks = $objectFactory->getDependencyMocks();
 

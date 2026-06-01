@@ -60,7 +60,7 @@ class UrlTest extends TestCase
     protected function setUp(): void
     {
         $mockFactory = new MockFactory($this);
-        $objectFactory = new TestObjectFactory($mockFactory);
+        $objectFactory = new TestObjectFactory('');
         $this->url = $objectFactory->create(Url::class);
         $this->dependencyMocks = $objectFactory->getDependencyMocks();
 

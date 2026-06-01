@@ -175,7 +175,7 @@ class BuilderTest extends TestCase
     protected function setUp(): void
     {
         $mockFactory = new MockFactory($this);
-        $objectFactory = new TestObjectFactory($mockFactory);
+        $objectFactory = new TestObjectFactory('');
 
         $this->builder = $objectFactory->create(Builder::class);
         $this->dependencyMocks = $objectFactory->getDependencyMocks();
